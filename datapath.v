@@ -1,6 +1,18 @@
+//In lab6 the changes that are needed to be made to datapath are as follows:
+//  1. component9 needs to be altered
+//  2. Input to component7 needs to be changed
+//  3. Change component10 to include 3-bits instead of 1
+//       One bit should represent a “zero flag”, which was what
+//        “status” represented in Lab 5. Another bit should represent a
+//        “negative flag” and be set to 1’b1 if the most
+//            significant bit of the main 16-bit ALU result is 1.
+//        The final bit represents an overflow flag.
 
 
-module datapath(datapath_in,  //input to datapath
+                      //inputs to datapath MUX
+module datapath(mdata,  //mdata is the 16-bit output of a memory block (Lab 7)
+                sximm8, //sign ex. lower 8-bits of the instruction register.
+                PC,     //“program counter” input lab8
 
                 vsel, //input to the first multiplexer b4 regfile
 
@@ -13,6 +25,8 @@ module datapath(datapath_in,  //input to datapath
                 loadb,
 
                 shift,  //input to shifter unit
+
+                sximm5, //input for toBin MUX
 
                 asel,   //source opperand multiplexers
                 bsel,
@@ -29,9 +43,11 @@ module datapath(datapath_in,  //input to datapath
 
   //inputs and outputs
 
-    input [15:0] datapath_in;  //input to datapath
+    input [15:0] mdata;  //inputs to datapath
+    input [15:0] sximm8;
+    input [7:0] PC;
 
-    input vsel; //input to the first multiplexer b4 regfile
+    input [1:0] vsel; //input to the first multiplexer b4 regfile
 
     input [2:0] writenum;  //inputs to register file
     input write;
@@ -43,6 +59,8 @@ module datapath(datapath_in,  //input to datapath
 
     input [1:0] shift; //input to shifter unit
 
+    input [15:0] sximm5; //input for toBin MUX
+
     input asel;   //source opperand multiplexers
     input bsel;
 
@@ -51,7 +69,9 @@ module datapath(datapath_in,  //input to datapath
     input loadc;  //pipeline c
     input loads; //status register
 
-    output Z_out;  //status output
+    output [2:0] Z_out;  //status output -> Z_out[0] = Zero flag(STATUS)
+                                      // -> Z_out[1] =negative flag
+                                      // -> Z_out[2] = overflow flag
     output [15:0] datapath_out; //datapath output
 
 //--------------------------------------------------------------
@@ -74,7 +94,7 @@ module datapath(datapath_in,  //input to datapath
     //wires into ALU
     wire[15:0] Ain, Bin;
     //wires out of the ALU
-    wire Z;
+    wire [2:0] Z;
     wire[15:0]out;
 
 
@@ -107,20 +127,24 @@ module datapath(datapath_in,  //input to datapath
                         .in(out), .out(datapath_out));
 
    //Component10: Status register
-   vDFFE #(1) RegStatus(.clk(clk), .en(loads),
+   vDFFE #(3) RegStatus(.clk(clk), .en(loads),
                         .in(Z), .out(Z_out));
 
   //Multiplexers
+
+  //NOTE: component9 needs to be changed ->done
     //Component9: Multiplexer before the regfile
-    Mux2a #(16) BeforeRegfile(.a1(datapath_in), .a0(datapath_out),
+    Mux4b #(16) BeforeRegfile(.a3(mdata), .a2(sximm8),
+                              .a1({8'b0,PC}), .a0(datapath_out),
                               .s(vsel), .b(data_in));
 
     //Component6: Multiplexer after LoadA
     Mux2a #(16) toAin(.a1(16'b0), .a0(loadaToMux),
                               .s(asel), .b(Ain));
 
+  //NOTE: component7 needs to be changed-> DONE
     //Component7: Multiplexer after LoadB and shifter
-    Mux2a #(16) toBin(.a1({11'b0,datapath_in[4:0]}), .a0(sout),
+    Mux2a #(16) toBin(.a1(sximm5), .a0(sout),
                               .s(bsel), .b(Bin));
 
 //--------------------------------------------------------------
@@ -133,13 +157,37 @@ endmodule
 
   //following are the modules made for the datapath
 
+
+//2-input binary select MUX
   module Mux2a(a1, a0, s, b);
    parameter k = 1 ;
    input [k-1:0] a0, a1;  // inputs
-   input s ; // one-hot select
+   input s ;
    output[k-1:0] b ;
 
    assign b = (s) ? a1 : a0;
 
+  endmodule
 
-endmodule
+
+//Added for lab6
+//4-Input-Binary-Select-MUX
+  module Mux4b(a3, a2, a1, a0, s, b);
+
+    parameter k = 16;
+    input [k-1:0] a3, a2, a1, a0; //inputs
+    input [1:0] s; //binary Select
+    output [k-1:0] b;
+    reg [k-1:0] b;
+
+    always @ ( * ) begin
+      case (s)
+        2'b00: b= a0;
+        2'b01: b= a1;
+        2'b10: b= a2;
+        2'b11: b= a3;
+        default: b= 16'bx; // catches errors
+      endcase
+    end
+
+  endmodule

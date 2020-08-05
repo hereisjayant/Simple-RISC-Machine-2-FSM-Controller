@@ -1,3 +1,4 @@
+// The output Z needs to be changed for lab6
 
 
 module ALU(Ain,Bin,ALUop,out,Z);
