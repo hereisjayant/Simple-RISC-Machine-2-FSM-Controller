@@ -8,94 +8,160 @@ z2
 !i10f 100
 cModel Technology
 dC:/intelFPGA/18.1
-vALU
-Z0 !s110 1596611933
+vAdder1
+Z0 !s110 1596629350
 !i10b 1
-!s100 ^2m5fYM=h9K_CJ1=GYNf23
-IFRk9_I<oJL;4UUkAUUX9Q1
+!s100 K]4fTZCHC]MzX`jGeDNN<2
+I:lh^`nRFUkBlG[T;Abado0
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6
-w1596609145
-8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v
-FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v
-L0 4
-Z3 OV;L;10.5b;63
+Z3 w1596628900
+Z4 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v
+Z5 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v
+L0 65
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1596611932.000000
-!s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v|
+Z7 !s108 1596629350.000000
+Z8 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
-n@a@l@u
-vdatapath
+Z10 o-work work
+Z11 tCvgOpt 0
+n@adder1
+vAddSub
 R0
+!i10b 1
+!s100 a_9LO3`SLzM8=MGFPzzIM0
+IOcc6B7SH8AALhMS_RGVKA2
+R1
+R2
+R3
+R4
+R5
+L0 49
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@add@sub
+vALU
+R0
+!i10b 1
+!s100 6YKZYi[g@bY8]lOTJ9GQA2
+IB?kDN=4Gm;nURXWeLQH5L3
+R1
+R2
+R3
+R4
+R5
+L0 7
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@a@l@u
+vALU_tb
+Z12 !s110 1596629352
+!i10b 1
+!s100 ]eMe^@>`AY@VkiH9LmWhE1
+Ifii9bLmRX>8lKW6VWP<fV1
+R1
+R2
+w1596629332
+8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v
+FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v
+L0 3
+R6
+r1
+!s85 0
+31
+Z13 !s108 1596629352.000000
+!s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v|
+!i113 1
+R10
+R11
+n@a@l@u_tb
+vdatapath
+Z14 !s110 1596629351
 !i10b 1
 !s100 UBzJH^4@Wbn<dfYElENVC2
 IOXU6CDZ6`OX2?b7eQVmic3
 R1
 R2
-Z6 w1596611835
-Z7 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
-Z8 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
+Z15 w1596611835
+Z16 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
+Z17 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
 L0 13
-R3
+R6
 r1
 !s85 0
 31
-Z9 !s108 1596611933.000000
-Z10 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v|
-Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v|
+Z18 !s108 1596629351.000000
+Z19 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v|
+Z20 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v|
 !i113 1
-R4
-R5
+R10
+R11
 vDec
-Z12 !s110 1596611934
+R12
 !i10b 1
 !s100 h9leJoEefIK7GbYHiScAc1
 IajUmk6M4ODY5g<734HCmQ3
 R1
 R2
-Z13 w1596259630
-Z14 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
-Z15 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
+Z21 w1596259630
+Z22 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
+Z23 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
 L0 61
-R3
+R6
 r1
 !s85 0
 31
-Z16 !s108 1596611934.000000
-Z17 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v|
-Z18 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v|
+R13
+Z24 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v|
+Z25 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v|
 !i113 1
-R4
-R5
+R10
+R11
 n@dec
 vinput_iface
-R12
+R14
 !i10b 1
 !s100 cI]j=hC?HTJJ3jIgio0>f3
 Iig>?bR]N5OJf<d[>KLTM`1
 R1
 R2
-Z19 w1592377050
-Z20 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v
-Z21 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v
+Z26 w1592377050
+Z27 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v
+Z28 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v
 L0 68
-R3
+R6
 r1
 !s85 0
 31
-R16
-Z22 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v|
-Z23 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v|
+R18
+Z29 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v|
+Z30 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v|
 !i113 1
-R4
-R5
+R10
+R11
 vlab6_check
-R0
+R14
 !i10b 1
 !s100 <=Ilh92BX3MH@7_Cll9_C2
 II<ZR5l;c@MzmYU@J325Td2
@@ -105,80 +171,80 @@ w1592377042
 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v
 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v
 L0 5
-R3
+R6
 r1
 !s85 0
 31
-R9
+R18
 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v|
 !i113 1
-R4
-R5
+R10
+R11
 vlab6_top
-R12
+R14
 !i10b 1
 !s100 HnMnR^0_7RC1<B7BMA51`0
 IM]<]?K9;^e1@2XA2JZ@Nf3
 R1
 R2
-R19
-R20
-R21
+R26
+R27
+R28
 L0 32
-R3
+R6
 r1
 !s85 0
 31
-R16
-R22
-R23
+R18
+R29
+R30
 !i113 1
-R4
-R5
+R10
+R11
 vMux2a
-R0
+R14
 !i10b 1
 !s100 e[<A2XP?LkVU91;ViV51:2
 IRNhNGJgTaD<8VPRV;oZJM3
 R1
 R2
-R6
-R7
-R8
+R15
+R16
+R17
 L0 162
-R3
+R6
 r1
 !s85 0
 31
-R9
+R18
+R19
+R20
+!i113 1
 R10
 R11
-!i113 1
-R4
-R5
 n@mux2a
 vMux4b
-R0
+R14
 !i10b 1
 !s100 ;HW;e=anB8WbfW@S_dRmA1
 IL>`f7]b45db458MW1YQ_D2
 R1
 R2
-R6
-R7
-R8
+R15
+R16
+R17
 L0 175
-R3
+R6
 r1
 !s85 0
 31
-R9
+R18
+R19
+R20
+!i113 1
 R10
 R11
-!i113 1
-R4
-R5
 n@mux4b
 vMux8
 R12
@@ -187,20 +253,20 @@ R12
 I5ZgIIbRWJL_`?>jF?jgoa3
 R1
 R2
-R13
-R14
-R15
+R21
+R22
+R23
 L0 90
-R3
+R6
 r1
 !s85 0
 31
-R16
-R17
-R18
+R13
+R24
+R25
 !i113 1
-R4
-R5
+R10
+R11
 n@mux8
 vregfile
 R12
@@ -209,22 +275,22 @@ R12
 IfI7W05f[m`a;UXBYMWdT:0
 R1
 R2
-R13
-R14
-R15
+R21
+R22
+R23
 L0 3
-R3
+R6
 r1
 !s85 0
 31
-R16
-R17
-R18
+R13
+R24
+R25
 !i113 1
-R4
-R5
+R10
+R11
 vshifter
-!s110 1596611935
+R12
 !i10b 1
 !s100 m>Kz=dQgMg[AlTDBgH21m2
 I_f<f10BELIh[OT=Ca5:CH0
@@ -234,58 +300,58 @@ w1596099996
 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v
 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v
 L0 3
-R3
+R6
 r1
 !s85 0
 31
-!s108 1596611935.000000
+R13
 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v|
 !i113 1
-R4
-R5
+R10
+R11
 vsseg
-R12
+R14
 !i10b 1
 !s100 aJf_ldgIfPZn0Cl5JzcXo2
 IDlmHnjK;DGBg;0e]3AdmM3
 R1
 R2
-R19
-R20
-R21
+R26
+R27
+R28
 L0 96
-R3
+R6
 r1
 !s85 0
 31
-R16
-R22
-R23
+R18
+R29
+R30
 !i113 1
-R4
-R5
+R10
+R11
 vvDFF
-R12
+R14
 !i10b 1
 !s100 cYi1U1`Gha]F?>a5zRH6>3
 I@Ran03Eg:fO4KO6b<fjTH3
 R1
 R2
-R19
-R20
-R21
+R26
+R27
+R28
 L0 79
-R3
+R6
 r1
 !s85 0
 31
-R16
-R22
-R23
+R18
+R29
+R30
 !i113 1
-R4
-R5
+R10
+R11
 nv@d@f@f
 vvDFFE
 R12
@@ -294,18 +360,18 @@ R12
 I19hPMk^7J7421h0mK`Qfo2
 R1
 R2
-R13
-R14
-R15
+R21
+R22
+R23
 L0 73
-R3
+R6
 r1
 !s85 0
 31
-R16
-R17
-R18
+R13
+R24
+R25
 !i113 1
-R4
-R5
+R10
+R11
 nv@d@f@f@e
