@@ -29,13 +29,12 @@ module ALU(Ain,Bin,ALUop,out,Z);
   assign sub = (ALUop==2'b01) ? 1'b1 : 1'b0;
 
 
-  AddSub OvFlow(Ain, Bin, sub, s, ovf);
+  AddSub OvFlow(Ain, Bin, sub, s, ovf); //does the math and checks overflow
 
 //ALU output: if out=0 Z=1, otherwise Z=0
-  assign Z[0] = (out==16'b0)?1'b1:1'b0;
 
-  assign Z[2] = ovf;
-
+  assign Z[0] = (out==16'b0)?1'b1:1'b0; //checks if the output is zero
+  assign Z[2] = ovf; //gets the overflow
   assign Z[1] = out[15]; //gets the signed bits
 
 endmodule
@@ -43,7 +42,7 @@ endmodule
 
 //------------------------------------------------------------------------------
 
-//helper modules:
+//helper modules(taken from lecture notes):
 
 // add a+b or subtract a-b, check for overflow
 module AddSub(a,b,sub,s,ovf) ;
