@@ -86,7 +86,7 @@ endmodule
 
 
 
-//multiplexer
+//multiplexer 1-hot
 module Mux8(a7, a6, a5, a4, a3, a2, a1, a0, s, b) ;//s is select, b is output
   parameter k = 1 ;
   input [k-1:0] a7, a6, a5, a4, a3, a2, a1, a0;  // inputs
