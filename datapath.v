@@ -43,9 +43,9 @@ module datapath(mdata,  //mdata is the 16-bit output of a memory block (Lab 7)
 
   //inputs and outputs
 
-    input [15:0] mdata;  //inputs to datapath
-    input [15:0] sximm8;
-    input [7:0] PC;
+    input [15:0] mdata;  //inputs to datapath (used in lab7, not lab6) assign 0 for lab 6
+    input [15:0] sximm8; //this is the actual input to look at in lab6
+    input [7:0] PC; //PC is the program counter used in lab8-> assign 0 for lab 6
 
     input [1:0] vsel; //input to the first multiplexer b4 regfile
 

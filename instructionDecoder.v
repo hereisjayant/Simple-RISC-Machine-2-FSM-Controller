@@ -17,7 +17,7 @@ module InstructionDecoder(iRegToiDec,//Inputs to the Decoder
 
   // Inputs/outputs to the module
   input [15:0] iRegToiDec;//Inputs to the Decoder
-  input [1:0] nsel; //NOTE: Use the binary select for Rn | Rd | Rm
+  input [2:0] nsel; //NOTE: Use the 1-HOT select for Rn | Rd | Rm
 
   output [2:0] opcode;//To FSM
   output [1:0] op;
@@ -28,6 +28,8 @@ module InstructionDecoder(iRegToiDec,//Inputs to the Decoder
   output [1:0] shift;
   output [2:0] readnum;
   output [2:0] writenum;
+
+//------------------------------------------------------------------------------
 
   //Wires
   wire [2:0] Rn, Rd, Rm;
@@ -64,25 +66,24 @@ module InstructionDecoder(iRegToiDec,//Inputs to the Decoder
   assign readnum = muxOutNsel;
   assign writenum = (muxOutNsel);
 
-  //------------------------------------------------------------------------------
 endmodule
 
 //******************************************************************************
 
-//3-Input-Binary-Select-MUX
+//3-Input-1-HOT-Select-MUX
 module Mux3b(a2, a1, a0, s, b);
 
   parameter k = 16;
   input [k-1:0] a2, a1, a0; //inputs
-  input [1:0] s; //binary Select
+  input [2:0] s; //1-HOT Select
   output [k-1:0] b;
   reg [k-1:0] b;
 
   always @ ( * ) begin
     case (s)
-      2'b00: b= a0;
-      2'b01: b= a1;
-      2'b10: b= a2;
+      2'b001: b= a0;
+      2'b010: b= a1;
+      2'b100: b= a2;
       default: b= 16'bx; // catches errors
     endcase
   end

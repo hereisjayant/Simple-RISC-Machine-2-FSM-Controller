@@ -8,7 +8,7 @@ module cpu(clk,reset,s,load,in,out,N,V,Z,w);
 
   input load; //load for the instruction register
 
-  input [15:0] in;
+  input [15:0] in; //this goes into the instruction register
   output [15:0] out; //gives out the contents of register C (component 5)
   output N, V, Z, w; //give the value of negative, overflow
                     //and zero status register bits.
@@ -24,8 +24,9 @@ module cpu(clk,reset,s,load,in,out,N,V,Z,w);
   //Instruction Register
   vDFFE InstructionReg(clk, load, in, iRegToiDec);
 
+  //NOTE: when instantiating datapath set PC and mdata to 0
+  
+
 endmodule
 
 //******************************************************************************
-
-//helper modules:
