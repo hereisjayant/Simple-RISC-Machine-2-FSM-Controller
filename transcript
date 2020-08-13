@@ -1,6 +1,42 @@
 # Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6.mpf
 # Loading project lab6
+# Compile of datapath_tb.v was successful.
+# Compile of cpu.v was successful.
+vsim -gui work.lab6_check
+# vsim -gui work.lab6_check 
+# Start time: 16:36:45 on Aug 13,2020
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3b
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu.v(60): [PCDPC] - Port size (1) does not match connection size (16) for port 'in'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v(73).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstructionReg File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu.v(60): [PCDPC] - Port size (1) does not match connection size (16) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v(73).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstructionReg File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a2'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a1'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a0'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'b'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu.v(113): [PCDPC] - Port size (8) does not match connection size (16) for port 'PC'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/DP File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
 # Compile of alu.v was successful.
 # Compile of datapath.v was successful.
 # Compile of lab6_autograder_check.v was successful.
@@ -12,58 +48,69 @@
 # Compile of datapath_tb.v was successful.
 # Compile of fsm.v was successful.
 # Compile of fsm_tb.v was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.datapath_tb
-# vsim -gui work.datapath_tb 
-# Start time: 13:35:27 on Aug 13,2020
-# Loading work.datapath_tb
-# Loading work.datapath
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-# Loading work.ALU
-# Loading work.AddSub
-# Loading work.Adder1
-# Loading work.shifter
-# Loading work.Mux4b
-# Loading work.Mux2a
-# ** Error: (vsim-3043) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v(180): Unresolved reference to 'dut'.
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_tb File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v
-# Error loading design
-# End time: 13:35:28 on Aug 13,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# Compile of datapath_tb.v was successful.
-vsim -gui work.datapath_tb
-# vsim -gui work.datapath_tb 
-# Start time: 13:36:55 on Aug 13,2020
-# Loading work.datapath_tb
-# Loading work.datapath
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-# Loading work.ALU
-# Loading work.AddSub
-# Loading work.Adder1
-# Loading work.shifter
-# Loading work.Mux4b
-# Loading work.Mux2a
-add wave -position end sim:/datapath_tb/*
-run -all
-# *THE TEST HAS BEEN PASSED*
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v(186)
-#    Time: 80 ps  Iteration: 0  Instance: /datapath_tb
-# Break in Module datapath_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v line 186
-add wave -position end sim:/datapath_tb/DUT/REGFILE/REG1/*
-add wave -position end sim:/datapath_tb/DUT/REGFILE/REG0/*
-add wave -position 20 sim:/datapath_tb/DUT/REGFILE/REG2/*
+# Compile of cpu.v was successful.
+# 12 compiles, 0 failed with no errors.
 restart -f
-run -all
-# *THE TEST HAS BEEN PASSED*
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v(186)
-#    Time: 80 ps  Iteration: 0  Instance: /datapath_tb
-# Break in Module datapath_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v line 186
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3b
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a2'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a1'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a0'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'b'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu.v(113): [PCDPC] - Port size (8) does not match connection size (16) for port 'PC'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/DP File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
+quit -sim
+# End time: 16:40:05 on Aug 13,2020, Elapsed time: 0:03:20
+# Errors: 0, Warnings: 12
+vsim -gui work.lab6_check
+# vsim -gui work.lab6_check 
+# Start time: 16:40:26 on Aug 13,2020
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3b
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a2'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a1'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'a0'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'b'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v(74).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/InstrDec/MuxToReadnumWritenum File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu.v(113): [PCDPC] - Port size (8) does not match connection size (16) for port 'PC'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/DP File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
 # Compile of alu.v was successful.
 # Compile of datapath.v was successful.
 # Compile of lab6_autograder_check.v was successful.
@@ -75,13 +122,186 @@ run -all
 # Compile of datapath_tb.v was successful.
 # Compile of fsm.v was successful.
 # Compile of fsm_tb.v was successful.
-# 11 compiles, 0 failed with no errors.
+# Compile of cpu.v was successful.
+# 12 compiles, 0 failed with no errors.
 restart -f
-# Loading work.datapath_tb
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3b
+# Loading work.control
+# Loading work.vDFF
 # Loading work.datapath
 # Loading work.regfile
 # Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v(137): [PCDPC] - Port size (16) does not match connection size (24) for port 'a1'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v(175).
+#    Time: 0 ps  Iteration: 0  Instance: /lab6_check/DUT/DP/BeforeRegfile File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
+# Error opening C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/[PCDPC] - Port size (16) does not match connection size 
+# Path name 'C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/[PCDPC] - Port size (16) does not match connection size ' doesn't exist.
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# Compile of cpu.v was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f
+# Loading work.lab6_check
+# Loading work.cpu
 # Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3b
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+add wave -position end sim:/lab6_check/*
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position end  sim:/lab6_check/DUT/FSM/STATE/out
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+restart -f
+# Loading work.lab6_check
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3b
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+# Warning in wave window restart: (vish-4014) No objects found matching '/lab6_check/DUT/FSM/STATE/out'. 
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# Compile of cpu.v was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f
+# Loading work.cpu
+# Loading work.control
+# Loading work.vDFF
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position end  sim:/lab6_check/DUT/FSM/STATE/out
+restart -f
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position end sim:/lab6_check/DUT/DP/REGFILE/REG0/*
+restart -f
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position end sim:/lab6_check/DUT/DP/REGFILE/REG0/*
+restart -f
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position end sim:/lab6_check/DUT/FSM/#ASSIGN#97/*
+add wave -position end  sim:/lab6_check/DUT/FSM/clk
+add wave -position end  sim:/lab6_check/DUT/FSM/reset
+add wave -position end  sim:/lab6_check/DUT/FSM/s
+add wave -position end  sim:/lab6_check/DUT/FSM/opcode
+add wave -position end  sim:/lab6_check/DUT/FSM/op
+add wave -position end  sim:/lab6_check/DUT/FSM/vsel
+add wave -position end  sim:/lab6_check/DUT/FSM/write
+add wave -position end  sim:/lab6_check/DUT/FSM/loada
+add wave -position end  sim:/lab6_check/DUT/FSM/loadb
+add wave -position end  sim:/lab6_check/DUT/FSM/asel
+add wave -position end  sim:/lab6_check/DUT/FSM/bsel
+add wave -position end  sim:/lab6_check/DUT/FSM/loadc
+add wave -position end  sim:/lab6_check/DUT/FSM/loads
+add wave -position end  sim:/lab6_check/DUT/FSM/nsel
+add wave -position end  sim:/lab6_check/DUT/FSM/w
+add wave -position end  sim:/lab6_check/DUT/FSM/present_state
+add wave -position end  sim:/lab6_check/DUT/FSM/state_next_reset
+add wave -position end  sim:/lab6_check/DUT/FSM/state_next
+add wave -position end  sim:/lab6_check/DUT/FSM/nextSignals
+restart -f
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position 18  sim:/lab6_check/DUT/DP/REGFILE/writenum
+restart -f
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position 18  sim:/lab6_check/DUT/DP/writenum
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# Compile of cpu.v was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3H
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
 # Loading work.Mux8
 # Loading work.ALU
 # Loading work.AddSub
@@ -90,7 +310,168 @@ restart -f
 # Loading work.Mux4b
 # Loading work.Mux2a
 run -all
-# *THE TEST HAS BEEN PASSED*
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v(186)
-#    Time: 80 ps  Iteration: 0  Instance: /datapath_tb
-# Break in Module datapath_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v line 186
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position 12  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/k
+add wave -position 13  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/a2
+add wave -position 14  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/a1
+add wave -position 15  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/a0
+add wave -position 16  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/s
+add wave -position 17  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/b
+restart -f
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position end  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/a2
+add wave -position end  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/a1
+add wave -position end  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/a0
+add wave -position end  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/s
+add wave -position end  sim:/lab6_check/DUT/InstrDec/MuxToReadnumWritenum/b
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# Compile of cpu.v was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3H
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+run -all
+# FAILED: MOV R0, #7
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(42)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 42
+add wave -position end sim:/lab6_check/*
+add wave -position end  sim:/lab6_check/DUT/FSM/STATE/out
+add wave -position end  sim:/lab6_check/DUT/DP/REGFILE/REG0/n
+add wave -position end  sim:/lab6_check/DUT/DP/REGFILE/REG0/clk
+add wave -position end  sim:/lab6_check/DUT/DP/REGFILE/REG0/en
+add wave -position end  sim:/lab6_check/DUT/DP/REGFILE/REG0/in
+add wave -position end  sim:/lab6_check/DUT/DP/REGFILE/REG0/out
+add wave -position end  sim:/lab6_check/DUT/DP/REGFILE/REG0/next_out
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# Compile of cpu.v was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3H
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+run -all
+# FAILED: MOV R1, #2
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(57)
+#    Time: 65 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 57
+quit -sim
+# End time: 22:28:10 on Aug 13,2020, Elapsed time: 5:47:44
+# Errors: 2, Warnings: 6
+# Compile of lab6_autograder_check.v was successful.
+# Compile of instructionDecoder_tb.v failed with 2 errors.
+# Compile of instructionDecoder_tb.v failed with 1 errors.
+# Compile of instructionDecoder_tb.v was successful.
+vsim -gui work.InstructionDecoder_tb
+# vsim -gui work.InstructionDecoder_tb 
+# Start time: 22:30:29 on Aug 13,2020
+# Loading work.InstructionDecoder_tb
+# Loading work.InstructionDecoder
+# Loading work.Mux3H
+add wave -position end sim:/InstructionDecoder_tb/*
+run -all
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# Compile of cpu.v was successful.
+# Compile of instructionDecoder_tb.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.InstructionDecoder_tb
+# Loading work.InstructionDecoder
+# Loading work.Mux3H
+run -all
+quit -sim
+# End time: 22:35:33 on Aug 13,2020, Elapsed time: 0:05:04
+# Errors: 0, Warnings: 0
+vsim -gui work.lab6_check
+# vsim -gui work.lab6_check 
+# Start time: 22:35:47 on Aug 13,2020
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3H
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+add wave -position end sim:/lab6_check/*
+# Load canceled
+run -all
+# INTERFACE OK
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(75)
+#    Time: 195 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 75

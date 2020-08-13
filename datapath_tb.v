@@ -167,22 +167,15 @@ module datapath_tb();
 
 //------------------------------------------------------------------------------
 
-  //Now this command is to verify the output stored in Reg2
-    //turning write OFF
-    write = 1'b0;
-
-    //turning read on for register2
-    readnum = 3'b010;
-    loada = 1'b1;
     #10;
 
     //Checking if the outout stored in reg2 is equal to 16
     if( DUT.REGFILE.R2 !== 16'd16 ) begin
-       $display("ERROR ** The data_out is %b, expected %b", DUT.data_out, 16'b0000_0000_0001_0000 );
+       $display("ERROR ** The contents of R2 are %b, expected %b", DUT.REGFILE.R2, 16'b0000_0000_0001_0000 );
        err = 1'b1;
     end
 
-    
+
 
     if( ~err ) $display("*THE TEST HAS BEEN PASSED*");
     $stop;

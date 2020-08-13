@@ -40,7 +40,7 @@ module InstructionDecoder(iRegToiDec,//Inputs to the Decoder
   //Module instantiating
 
   //outouts readnum and writenum
-  Mux3b MuxToReadnumWritenum(Rn, Rd, Rm, nsel, muxOutNsel);
+  Mux3H #(3) MuxToReadnumWritenum(Rn, Rd, Rm, nsel, muxOutNsel);
 
   //------------------------------------------------------------------------------
 
@@ -64,14 +64,14 @@ module InstructionDecoder(iRegToiDec,//Inputs to the Decoder
 
   //outputs of the MUX
   assign readnum = muxOutNsel;
-  assign writenum = (muxOutNsel);
+  assign writenum = muxOutNsel;
 
 endmodule
 
 //******************************************************************************
 
 //3-Input-1-HOT-Select-MUX
-module Mux3b(a2, a1, a0, s, b);
+module Mux3H(a2, a1, a0, s, b);
 
   parameter k = 16;
   input [k-1:0] a2, a1, a0; //inputs
@@ -81,9 +81,9 @@ module Mux3b(a2, a1, a0, s, b);
 
   always @ ( * ) begin
     case (s)
-      2'b001: b= a0;
-      2'b010: b= a1;
-      2'b100: b= a2;
+      3'b001: b= a0;
+      3'b010: b= a1;
+      3'b100: b= a2;
       default: b= 16'bx; // catches errors
     endcase
   end

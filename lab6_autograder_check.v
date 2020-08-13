@@ -24,7 +24,7 @@ module lab6_check;
     err = 0;
     reset = 1; s = 0; load = 0; in = 16'b0;
     #10;
-    reset = 0; 
+    reset = 0;
     #10;
 
     in = 16'b1101000000000111;
