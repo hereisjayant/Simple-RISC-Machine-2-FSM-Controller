@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA/18.1
 vAdder1
-Z0 !s110 1597258622
+Z0 !s110 1597299185
 !i10b 1
 !s100 oL@kYLU@a=66D=COTcC0j0
 I<cbdXbBRA_4R:Z7@1Qh3=1
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1597258622.000000
+Z7 !s108 1597299185.000000
 Z8 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v|
 Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v|
 !i113 1
@@ -75,7 +75,7 @@ R10
 R11
 n@a@l@u
 vALU_tb
-Z12 !s110 1597258624
+Z12 !s110 1597299187
 !i10b 1
 !s100 ]eMe^@>`AY@VkiH9LmWhE1
 Ifii9bLmRX>8lKW6VWP<fV1
@@ -89,7 +89,7 @@ R6
 r1
 !s85 0
 31
-Z13 !s108 1597258624.000000
+Z13 !s108 1597299187.000000
 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v|
 !i113 1
@@ -97,13 +97,13 @@ R10
 R11
 n@a@l@u_tb
 vcontrol
-Z14 !s110 1597258625
+Z14 !s110 1597299188
 !i10b 1
-!s100 3>@aMCd=FJlVi<m29^3Gc1
-IPP@2]DJ;?nTLAIO?64m<30
+!s100 Q:zOYfUbP[HdFDS@bGT;10
+I;WjFP<OLii`e=Va?D>A5L3
 R1
 R2
-Z15 w1597258618
+Z15 w1597298195
 Z16 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
 Z17 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
 L0 23
@@ -111,20 +111,20 @@ R6
 r1
 !s85 0
 31
-Z18 !s108 1597258625.000000
+Z18 !s108 1597299188.000000
 Z19 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v|
 Z20 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v|
 !i113 1
 R10
 R11
 vcontrol_tb
-!s110 1597258626
+R14
 !i10b 1
-!s100 :c3AnUa`g@43E^@N]g?k_3
-ICo@LEAY`AJ2;;hIMFYG3z2
+!s100 MXi1@OGU0S?o<O>oT5H]Y1
+I34QD^6;OM`1ZP^0i@3ULi2
 R1
 R2
-w1597258516
+w1597299180
 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v
 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v
 L0 14
@@ -132,7 +132,7 @@ R6
 r1
 !s85 0
 31
-!s108 1597258626.000000
+R18
 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v|
 !i113 1
@@ -181,7 +181,7 @@ R18
 R10
 R11
 vDec
-Z26 !s110 1597258623
+Z26 !s110 1597299186
 !i10b 1
 !s100 h9leJoEefIK7GbYHiScAc1
 IajUmk6M4ODY5g<734HCmQ3
@@ -195,7 +195,7 @@ R6
 r1
 !s85 0
 31
-Z30 !s108 1597258623.000000
+Z30 !s108 1597299186.000000
 Z31 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v|
 Z32 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v|
 !i113 1
@@ -411,7 +411,7 @@ R6
 r1
 !s85 0
 31
-R13
+R30
 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v|
 !i113 1
@@ -441,14 +441,14 @@ R11
 vvDFF
 R14
 !i10b 1
-!s100 [oj6AGdT=6_ASVAW8Fd4K1
-ID^306:fVNdnE<2cZLFac13
+!s100 DfcTECC^hL[lmLgFJeNJD1
+I6>dD:fl3NCK:18INmdZDh3
 R1
 R2
 R15
 R16
 R17
-L0 220
+L0 221
 R6
 r1
 !s85 0

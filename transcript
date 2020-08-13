@@ -727,3 +727,373 @@ run -all
 # ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
 #    Time: 65 ps  Iteration: 0  Instance: /control_tb
 # Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (3) does not match connection size (2) for port 'opcode'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(27).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (2) does not match connection size (3) for port 'op'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+run -all
+# PASSED
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
+#    Time: 65 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v failed with 1 errors.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (3) does not match connection size (2) for port 'opcode'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(27).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (2) does not match connection size (3) for port 'op'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+run -all
+# PASSED
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
+#    Time: 65 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (3) does not match connection size (2) for port 'opcode'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(27).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (2) does not match connection size (3) for port 'op'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+run -all
+# PASSED
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
+#    Time: 65 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (3) does not match connection size (2) for port 'opcode'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(27).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(45): [PCDPC] - Port size (2) does not match connection size (3) for port 'op'. The port definition is at: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /control_tb/dut File: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
+#    Time: 65 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
+#    Time: 65 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
+#    Time: 65 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(109)
+#    Time: 90 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 109
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# ERROR ** state is 00000, expected 00000
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(111)
+#    Time: 80 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 111
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# ERROR ** state is 00000, expected 00000
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(110)
+#    Time: 80 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 110
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED the test for ADD command
+# PASSED the test for ADD command
+# **PASSED ALL TESTS**
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(137)
+#    Time: 160 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 137
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED the test for ADD command
+# PASSED the test for ADD command
+# **PASSED ALL TESTS**
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(137)
+#    Time: 160 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 137
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED the test for ADD command
+# PASSED the test for ADD command
+# PASSED the test for MOV Rn,#<im8> command
+# **PASSED ALL TESTS**
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(160)
+#    Time: 190 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 160
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED the test for ADD command
+# PASSED the test for MVN Rd,Rm{,<sh_op>} command
+# PASSED the test for MOV Rn,#<im8> command
+# PASSED the test for CMP Rn,Rm{,<sh_op>}  command
+# **PASSED ALL TESTS**
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(183)
+#    Time: 260 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 183
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful with warnings.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# Loading work.control_tb
+# Loading work.control
+# Loading work.vDFF
+run -all
+# PASSED the test for ADD command
+# PASSED the test for MVN Rd,Rm{,<sh_op>} command
+# PASSED the test for MOV Rn,#<im8> command
+# PASSED the test for CMP Rn,Rm{,<sh_op>}  command
+# PASSED the test for MOV Rd,Rm{,<sh_op>}  command
+# PASSED the test for AND Rd,Rn,Rm{,<sh_op>}  command
+# **PASSED ALL TESTS**
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v(229)
+#    Time: 400 ps  Iteration: 0  Instance: /control_tb
+# Break in Module control_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v line 229
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/Lab6_FSM_Wave.do
+# End time: 11:50:04 on Aug 13,2020, Elapsed time: 14:57:47
+# Errors: 4, Warnings: 15

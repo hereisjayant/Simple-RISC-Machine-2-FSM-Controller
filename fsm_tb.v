@@ -18,8 +18,8 @@ module control_tb();
  reg clk;
  reg reset;
  reg s;
- reg [2:0] op;
- reg [1:0] opcode;
+ reg [2:0] opcode;
+ reg [1:0] op;
                //input to the first multiplexer b4 regfile
  wire [1:0] vsel;
                //input to the REGFILE
@@ -85,27 +85,147 @@ module control_tb();
     //Setting signal err to 0
       err = 1'b0;
       reset = 1'b0; //resets the FSM to sWait
-      s= 1'b0; //stays in state sWait
-      op = 3'b101;//op for MOV
-      opcode = 2'b00;//sximm8 mov
+      s= 1'b0; //stays in state in the begining
+
+//------------------------------------------------------------------------------
+
+    //testing ADD operation
+      opcode = 3'b101;
+      op = 2'b00;
       #10;
 
       s= 1'b1;
-      #5; //turns on s for 1 Cycle
-
+      #10; //turns on s for 1 Cycle
       s= 1'b0;
-      #50;
+      #60;//turns s off for 6 cycles
 
 
       // check whether in expected state
-      if( dut.present_state !== `sWait && dut.w !== 1'b1 ) begin // checks the reset
+      if( dut.w !== 1'b1 ) begin // checks the reset
         $display("ERROR ** state is %b, expected %b",dut.present_state, `sWait );
         err = 1'b1;
       end
 
+    if( ~err ) $display("PASSED the test for ADD command");
+    else $stop;
+
+//------------------------------------------------------------------------------
+   //testing MVN Rd,Rm{,<sh_op>} operation
+     opcode = 3'b101;
+     op = 2'b11;
+     #10;
+
+     s= 1'b1;
+     #10; //turns on s for 1 Cycle
+     s= 1'b0;
+     #50;//turns s off for 5 cycles
 
 
-    if( ~err ) $display("PASSED");
+     // check whether in expected state
+     if( dut.w !== 1'b1 ) begin // checks the reset
+       $display("ERROR ** state is %b, expected %b",dut.present_state, `sWait );
+       err = 1'b1;
+     end
+
+    if( ~err ) $display("PASSED the test for MVN Rd,Rm{,<sh_op>} command");
+    else $stop;
+
+
+//------------------------------------------------------------------------------
+
+   //testing MOV Rn,#<im8> operation
+     opcode = 3'b110;
+     op = 2'b10;
+     #10;
+
+     s= 1'b1;
+     #10; //turns on s for 1 Cycle
+     s= 1'b0;
+     #20;//turns s off for 2 cycles
+
+
+     // check whether in expected state
+     if( dut.w !== 1'b1 ) begin // checks the reset
+       $display("ERROR ** state is %b, expected %b",dut.present_state, `sWait );
+       err = 1'b1;
+     end
+
+    if( ~err ) $display("PASSED the test for MOV Rn,#<im8> command");
+    else $stop;
+
+
+//------------------------------------------------------------------------------
+
+  //testing CMP Rn,Rm{,<sh_op>}  operation
+    opcode = 3'b101;
+    op = 2'b01;
+    #10;
+
+    s= 1'b1;
+    #10; //turns on s for 1 Cycle
+    s= 1'b0;
+    #50;//turns s off for 5 cycles
+
+
+    // check whether in expected state
+    if( dut.w !== 1'b1 ) begin // checks the reset
+      $display("ERROR ** state is %b, expected %b",dut.present_state, `sWait );
+      err = 1'b1;
+    end
+
+   if( ~err ) $display("PASSED the test for CMP Rn,Rm{,<sh_op>}  command");
+   else $stop;
+
+
+//------------------------------------------------------------------------------
+
+  //testing MOV Rd,Rm{,<sh_op>}  operation
+    opcode = 3'b110;
+    op = 2'b00;
+    #10;
+
+    s= 1'b1;
+    #10; //turns on s for 1 Cycle
+    s= 1'b0;
+    #50;//turns s off for 5 cycles
+
+
+    // check whether in expected state
+    if( dut.w !== 1'b1 ) begin // checks the reset
+      $display("ERROR ** state is %b, expected %b",dut.present_state, `sWait );
+      err = 1'b1;
+    end
+
+   if( ~err ) $display("PASSED the test for MOV Rd,Rm{,<sh_op>}  command");
+   else $stop;
+
+
+//------------------------------------------------------------------------------
+
+  //testing AND Rd,Rn,Rm{,<sh_op>}  operation
+    opcode = 3'b101;
+    op = 2'b10;
+    #10;
+
+    s= 1'b1;
+    #10; //turns on s for 1 Cycle
+    s= 1'b0;
+    #50;//turns s off for 5 cycles
+
+
+    // check whether in expected state
+    if( dut.w !== 1'b1 ) begin // checks the reset
+      $display("ERROR ** state is %b, expected %b",dut.present_state, `sWait );
+      err = 1'b1;
+    end
+
+   if( ~err ) $display("PASSED the test for AND Rd,Rn,Rm{,<sh_op>}  command");
+   else $stop;
+
+
+//------------------------------------------------------------------------------
+
+    $display("**PASSED ALL TESTS**");
     $stop;
     end
 

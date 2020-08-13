@@ -100,7 +100,7 @@ module datapath(mdata,  //mdata is the 16-bit output of a memory block (Lab 7)
 
 //------------------------------------------------------------------
 
-    //instantiating the main datapath Modules
+    //instantiating the main datapath Modules (Dont change the instance name)
     regfile REGFILE(data_in,writenum,write,readnum,clk,data_out);
 
     ALU alu(Ain,Bin,ALUop,out,Z);

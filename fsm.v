@@ -106,11 +106,12 @@ module control(   //inputs to fsm
     casex ( {present_state, s, {opcode, op}} )
 
     //Wait State                                            //turn the wait signal on
-      {`sWait, 1'b0, 5'bx}: nextSignals = {`sWait, 13'b0}; // sWait->sWait as long as s==0
-      {`sWait, 1'b1, 5'bx}: nextSignals = {`sDecode, 13'b0}; // sWait->sDecode as s==1
+      {`sWait, 1'b0, 5'bx}: nextSignals = {`sWait, 13'b1}; // sWait->sWait as long as s==0
+      {`sWait, 1'b1, 5'bx}: nextSignals = {`sDecode, 13'b1}; // sWait->sDecode as s==1
 
 //------------------------------------------------------------------------------
 //NOTE: Fix errors here
+
     //Decode State
       //for instruction MOV Rn,#<im8>
       {`sDecode, 1'bx, 5'b110_10}: nextSignals = {`sMovImToRn, 13'b0}; // sDecode->sMovImToRn
@@ -125,7 +126,7 @@ module control(   //inputs to fsm
     //MovImToRn State
       {`sMovImToRn, 1'bx, 5'bx}: nextSignals = {`sWait, 2'b10, 1'b1,      // {state_next, vsel, write,
                                                 1'b0, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
-                                                1'b0, 1'b0, 3'b100, 1'b1 //    loadc, loads, nsel, w} = nextSignals
+                                                1'b0, 1'b0, 3'b100, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                 }; // sDecode->sGetB
 
 //------------------------------------------------------------------------------
@@ -190,7 +191,7 @@ module control(   //inputs to fsm
     //for CMP Rn, Rm
     {`sGetStatus, 1'bx, 5'b101_01}: nextSignals = {`sWait, 2'b00, 1'b0,// {state_next, vsel, write,
                                               1'b0, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
-                                              1'b0, 1'b1, 3'b000, 1'b1 //    loadc, loads, nsel, w} = nextSignals
+                                              1'b0, 1'b1, 3'b000, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                               };
 
 //------------------------------------------------------------------------------
@@ -199,7 +200,7 @@ module control(   //inputs to fsm
     //all in this state
     {`sResultToRd, 1'bx, 5'bx}: nextSignals = {`sWait, 2'b00, 1'b1,// {state_next, vsel, write,
                                               1'b0, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
-                                              1'b0, 1'b0, 3'b010, 1'b1 //    loadc, loads, nsel, w} = nextSignals
+                                              1'b0, 1'b0, 3'b010, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                               };
 
 //------------------------------------------------------------------------------
