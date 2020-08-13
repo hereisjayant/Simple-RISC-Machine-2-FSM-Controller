@@ -24,8 +24,8 @@ module control(   //inputs to fsm
               clk,
               reset,
               s,
-              op,
               opcode,
+              op,
                   //input to the first multiplexer b4 regfile
               vsel,
                   //input to the REGFILE
@@ -49,8 +49,8 @@ module control(   //inputs to fsm
   input clk;
   input reset;
   input s;
-  input [2:0] op;
-  input [1:0] opcode;
+  input [2:0] opcode;
+  input [1:0] op;
                 //input to the first multiplexer b4 regfile
   output [1:0] vsel;
                 //input to the REGFILE
@@ -74,15 +74,15 @@ module control(   //inputs to fsm
 
   // state encoding for control FSM
   `define SW          5
-  `define sWait       5'd0
-  `define sDecode     5'd1
-  `define sGetB       5'd2
-  `define sGetA       5'd3
-  `define sAND_ADD    5'd4
-  `define sMVN_MOV    5'd5
-  `define sGetStatus  5'd6
-  `define sResultToRd 5'd7
-  `define sMovImToRn  5'd8
+  `define sWait       5'b00_000
+  `define sDecode     5'b00_001
+  `define sGetB       5'b00_010
+  `define sGetA       5'b00_011
+  `define sAND_ADD    5'b00_100
+  `define sMVN_MOV    5'b00_101
+  `define sGetStatus  5'b00_110
+  `define sResultToRd 5'b00_111
+  `define sMovImToRn  5'b01_000
 
 //------------------------------------------------------------------------------
 
@@ -103,27 +103,29 @@ module control(   //inputs to fsm
        //    loadc, loads, nsel, w} = nextSignals
 
   always @(*)
-    casex ( {present_state, s, opcode, op} )
+    casex ( {present_state, s, {opcode, op}} )
 
     //Wait State                                            //turn the wait signal on
-      {`sWait, 1'b0, 5'bx}: nextSignals = {`sWait, 17'd1}; // sWait->sWait as long as s==0
-      {`sWait, 1'b1, 5'bx}: nextSignals = {`sDecode, 17'd1}; // sWait->sDecode as s==1
+      {`sWait, 1'b0, 5'bx}: nextSignals = {`sWait, 13'b0}; // sWait->sWait as long as s==0
+      {`sWait, 1'b1, 5'bx}: nextSignals = {`sDecode, 13'b0}; // sWait->sDecode as s==1
 
 //------------------------------------------------------------------------------
-
+//NOTE: Fix errors here
     //Decode State
       //for instruction MOV Rn,#<im8>
-      {`sDecode, 1'bx, 5'b110_10}: nextSignals = {`sMovImToRn, 17'b0}; // sDecode->sMovImToRn
+      {`sDecode, 1'bx, 5'b110_10}: nextSignals = {`sMovImToRn, 13'b0}; // sDecode->sMovImToRn
       //for other instructions
-      {`sDecode, 1'bx, 5'b110_00}: nextSignals = {`sGetB, 17'b0}; // sDecode->sGetB
-      {`sDecode, 1'bx, 5'b101_xx}: nextSignals = {`sGetB, 17'b0}; // sDecode->sGetB
+      {`sDecode, 1'bx, 5'b110_00}: nextSignals = {`sGetB, 13'b0}; // sDecode->sGetB
+
+      {`sDecode, 1'bx, 5'b101_xx}: nextSignals = {`sGetB, 13'b0};
+
 
 //------------------------------------------------------------------------------
 
     //MovImToRn State
       {`sMovImToRn, 1'bx, 5'bx}: nextSignals = {`sWait, 2'b10, 1'b1,      // {state_next, vsel, write,
-                                                1'b0, 1'b0, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
-                                                1'b0, 1'b0, 3'b100, 1'b0 //    loadc, loads, nsel, w} = nextSignals
+                                                1'b0, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
+                                                1'b0, 1'b0, 3'b100, 1'b1 //    loadc, loads, nsel, w} = nextSignals
                                                 }; // sDecode->sGetB
 
 //------------------------------------------------------------------------------
@@ -131,22 +133,22 @@ module control(   //inputs to fsm
     //GetB State
       //for MOV Rd, Rm
       {`sGetB, 1'bx, 5'b110_00}: nextSignals = {`sMVN_MOV, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                                1'b0, 1'b1, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
+                                                1'b0, 1'b1, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
                                                 1'b0, 1'b0, 3'b001, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                 };
       //for MVN Rd, Rm
       {`sGetB, 1'bx, 5'b101_11}: nextSignals = {`sMVN_MOV, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                                1'b0, 1'b1, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
+                                                1'b0, 1'b1, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
                                                 1'b0, 1'b0, 3'b001, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                 };
       //for ADD Rd,Rn Rm and for AND Rd,Rn Rm (Check the x in op)
       {`sGetB, 1'bx, 5'b101_x0}: nextSignals = {`sGetA, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                                1'b0, 1'b1, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
+                                                1'b0, 1'b1, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
                                                 1'b0, 1'b0, 3'b001, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                 };
       //for CMP Rn, Rm
       {`sGetB, 1'bx, 5'b101_01}: nextSignals = {`sGetA, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                                1'b0, 1'b1, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
+                                                1'b0, 1'b1, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
                                                 1'b0, 1'b0, 3'b001, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                 };
 
@@ -155,12 +157,12 @@ module control(   //inputs to fsm
     //GetA State
      //for ADD Rd,Rn Rm and for AND Rd,Rn Rm (Check the x in op)
      {`sGetA, 1'bx, 5'b101_x0}: nextSignals = {`sAND_ADD, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                               1'b1, 1'b0, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
+                                               1'b1, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
                                                1'b0, 1'b0, 3'b100, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                };
      //for CMP Rn, Rm
      {`sGetA, 1'bx, 5'b101_01}: nextSignals = {`sGetStatus, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                               1'b1, 1'b0, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
+                                               1'b1, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
                                                1'b0, 1'b0, 3'b100, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                };
 
@@ -169,7 +171,7 @@ module control(   //inputs to fsm
     //MVN_MOV State (Cycle 2)
      //for MOV Rd, Rm and for MVN Rd, Rm
      {`sMVN_MOV, 1'bx, 5'bx}: nextSignals = {`sResultToRd, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                                 1'b0, 1'b0, 1'b1, 1'b0   //  loada, loadb, asel, bsel,
+                                                 1'b0, 1'b0, 1'b1, 1'b0,   //  loada, loadb, asel, bsel,
                                                  1'b1, 1'b0, 3'b000, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                                  };
 
@@ -178,7 +180,7 @@ module control(   //inputs to fsm
     //AND_ADD State
     //for ADD Rd,Rn Rm and for AND Rd,Rn Rm (Check the x in op)
     {`sAND_ADD, 1'bx, 5'bx}: nextSignals = {`sResultToRd, 2'b00, 1'b0,      // {state_next, vsel, write,
-                                              1'b0, 1'b0, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
+                                              1'b0, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
                                               1'b1, 1'b0, 3'b000, 1'b0 //    loadc, loads, nsel, w} = nextSignals
                                               };
 
@@ -187,8 +189,8 @@ module control(   //inputs to fsm
   //GetStatus State
     //for CMP Rn, Rm
     {`sGetStatus, 1'bx, 5'b101_01}: nextSignals = {`sWait, 2'b00, 1'b0,// {state_next, vsel, write,
-                                              1'b0, 1'b0, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
-                                              1'b0, 1'b1, 3'b000, 1'b0 //    loadc, loads, nsel, w} = nextSignals
+                                              1'b0, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
+                                              1'b0, 1'b1, 3'b000, 1'b1 //    loadc, loads, nsel, w} = nextSignals
                                               };
 
 //------------------------------------------------------------------------------
@@ -196,14 +198,14 @@ module control(   //inputs to fsm
   //ResultToRd State
     //all in this state
     {`sResultToRd, 1'bx, 5'bx}: nextSignals = {`sWait, 2'b00, 1'b1,// {state_next, vsel, write,
-                                              1'b0, 1'b0, 1'b0, 1'b0   //  loada, loadb, asel, bsel,
-                                              1'b0, 1'b0, 3'b010, 1'b0 //    loadc, loads, nsel, w} = nextSignals
+                                              1'b0, 1'b0, 1'b0, 1'b0,   //  loada, loadb, asel, bsel,
+                                              1'b0, 1'b0, 3'b010, 1'b1 //    loadc, loads, nsel, w} = nextSignals
                                               };
 
 //------------------------------------------------------------------------------
 
 
-      default:     nextSignals = {{`SW{1'bx}},{4{1'bx}}}; // only get here if present_state, s, or zero are x’s
+      default:     nextSignals = {{`SW{1'bx}},{13{1'bx}}}; // only get here if present_state, s, or zero are x’s
     endcase
 
   // copy to module outputs

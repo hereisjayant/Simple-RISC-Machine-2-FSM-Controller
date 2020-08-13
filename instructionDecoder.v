@@ -50,10 +50,10 @@ module InstructionDecoder(iRegToiDec,//Inputs to the Decoder
   assign ALUop = iRegToiDec[12:11];
   //Sign extends bit 4
   assign sximm5 = (iRegToiDec[4])?
-                  {11{1'b1},iRegToiDec[4:0]}:(11{1'b0},iRegToiDec[4:0]);
+                  {{11{1'b1}},iRegToiDec[4:0]}:{{11{1'b0}},iRegToiDec[4:0]};
   //Sign extends bit 7;
   assign sximm8 = (iRegToiDec[7])?
-                  {8{1'b1},iRegToiDec[7:0]}:(8{1'b0},iRegToiDec[7:0]);
+                  {{8{1'b1}},iRegToiDec[7:0]}:{{8{1'b0}},iRegToiDec[7:0]};
 
   assign Rm = iRegToiDec[2:0];
 
