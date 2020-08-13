@@ -12,9 +12,11 @@ module datapath_tb();
 //Ins and Outs
   reg err;
 
-  reg [15:0] datapath_in;  //reg to datapath
+  reg [15:0] mdata;  //inputs to datapath (used in lab7, not lab6) assign 0 for lab 6
+  reg [15:0] sximm8; //this is the actual input to look at in lab6
+  reg [7:0] PC; //PC is the program counter used in lab8-> assign 0 for lab 6
 
-  reg vsel; //input to the first multiplexer b4 regfile
+  reg [1:0]vsel; //input to the first multiplexer b4 regfile
 
   reg [2:0] writenum;  //inputs to register file
   reg write;
@@ -26,6 +28,8 @@ module datapath_tb();
 
   reg [1:0] shift; //input to shifter unit
 
+  reg [15:0] sximm5; //input for toBin MUX
+
   reg asel;   //source opperand multiplexers
   reg bsel;
 
@@ -34,12 +38,14 @@ module datapath_tb();
   reg loadc;  //pipeline c
   reg loads; //status register
 
-  wire Z_out;  //status output
+  wire [2:0] Z_out;  //status output
   wire [15:0] datapath_out; //datapath output
 
 
 //instantiating the datapath
- datapath DUT(datapath_in,  //input to datapath
+ datapath DUT(   mdata,  //mdata is the 16-bit output of a memory block (Lab 7)
+                 sximm8, //sign ex. lower 8-bits of the instruction register.
+                 PC,     //“program counter” input lab8
 
                  vsel, //input to the first multiplexer b4 regfile
 
@@ -52,6 +58,8 @@ module datapath_tb();
                  loadb,
 
                  shift,  //input to shifter unit
+
+                 sximm5, //input for toBin MUX
 
                  asel,   //source opperand multiplexers
                  bsel,
@@ -85,15 +93,19 @@ module datapath_tb();
 
 //------------------------------------------------------------------------------
 
+    mdata = 16'b0;
+    PC = 16'b0;
+    sximm5=16'b0;
+
   //Executing the first command
   // MOV R0, #7 ; this means, take the absolute number 7 and store it in R0
 
     //selects register 0
     writenum = 3'b000;
     //inputs number 7 to the datapath
-    datapath_in = 16'd7;
+    sximm8 = 16'd7;
     //selects the input from the first MUX
-    vsel = 1'b1;
+    vsel = 2'b10;
     //turn on write
     write = 1'b1;
     //waits for 10 time steps = 1cycle
@@ -107,9 +119,9 @@ module datapath_tb();
     //selects register 1
     writenum = 3'b001;
     //inputs number 2 to the datapath
-    datapath_in = 16'd2;
+    sximm8 = 16'd2;
     //selects the input from the first MUX
-    vsel = 1'b1;
+    vsel = 2'b10;
     //turn on write
     write = 1'b1;
     //waits for 10 time steps = 1 cycle
@@ -150,7 +162,7 @@ module datapath_tb();
     //selecting register2
     writenum = 3'b010;
     write = 1'b1;
-    vsel = 1'b0;
+    vsel = 2'b00;
     #10;
 
 //------------------------------------------------------------------------------
@@ -165,10 +177,12 @@ module datapath_tb();
     #10;
 
     //Checking if the outout stored in reg2 is equal to 16
-    if( dut.data_out !== 16'd16 ) begin
-       $display("ERROR ** The data_out is %b, expected %b", dut.data_out, 16'b0000_0000_0001_0000 );
+    if( DUT.REGFILE.R2 !== 16'd16 ) begin
+       $display("ERROR ** The data_out is %b, expected %b", DUT.data_out, 16'b0000_0000_0001_0000 );
        err = 1'b1;
     end
+
+    
 
     if( ~err ) $display("*THE TEST HAS BEEN PASSED*");
     $stop;

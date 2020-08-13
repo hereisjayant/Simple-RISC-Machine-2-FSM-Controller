@@ -1,10 +1,12 @@
-C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
+C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module control
--- Compiling module vDFF
+-- Compiling module regfile
+-- Compiling module Dec
+-- Compiling module vDFFE
+-- Compiling module Mux8
 
 Top level modules:
-	control
+	regfile
 
 } {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -15,29 +17,29 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ALU
 
-} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/regfile.v
+} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module regfile
--- Compiling module Dec
--- Compiling module vDFFE
--- Compiling module Mux8
+-- Compiling module control
+-- Compiling module vDFF
 
 Top level modules:
-	regfile
+	control
 
-} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v
+} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module control_tb
+-- Compiling module datapath
+-- Compiling module Mux2a
+-- Compiling module Mux4b
 
 Top level modules:
-	control_tb
+	datapath
 
-} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v
+} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ALU_tb
+-- Compiling module lab6_check
 
 Top level modules:
-	ALU_tb
+	lab6_check
 
 } {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_top.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -49,21 +51,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	lab6_top
 
-} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v
+} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/alu_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module lab6_check
+-- Compiling module ALU_tb
 
 Top level modules:
-	lab6_check
+	ALU_tb
 
-} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath.v
+} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module datapath
--- Compiling module Mux2a
--- Compiling module Mux4b
+-- Compiling module control_tb
 
 Top level modules:
-	datapath
+	control_tb
 
 } {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v {2 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/instructionDecoder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -75,13 +75,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	InstructionDecoder
-
-} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/datapath_tb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module datapath_tb
-
-Top level modules:
-	datapath_tb
 
 } {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
