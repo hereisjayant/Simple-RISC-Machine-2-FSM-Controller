@@ -475,3 +475,8 @@ run -all
 # ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(75)
 #    Time: 195 ps  Iteration: 0  Instance: /lab6_check
 # Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 75
+quit -sim
+# End time: 23:55:49 on Aug 13,2020, Elapsed time: 1:20:02
+# Errors: 1, Warnings: 0
+# Compile of lab6_top.v failed with 11 errors.
+# Compile of lab6_top.v was successful.

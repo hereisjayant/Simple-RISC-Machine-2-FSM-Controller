@@ -1,7 +1,7 @@
 // INSTRUCTIONS:
 //
-// You can use this file to demo your Lab6 on your DE1-SoC.  
-// 
+// You can use this file to demo your Lab6 on your DE1-SoC.
+//
 // You will need to fill in the sseg module as by default it will just print
 // F's on HEX0 through HEX3.  YOU SHOULD NOT need to change the signal names
 // inside the lab6_top module because the auto-grader will assume the same
@@ -10,7 +10,7 @@
 
 // DE1-SOC INTERFACE SPECIFICATION for lab6_top.v code in this file:
 //
-// clk input to datpath has rising edge when KEY0 is *pressed* 
+// clk input to datpath has rising edge when KEY0 is *pressed*
 //
 // HEX5 contains the status register output on the top (Z), middle (N) and
 // bottom (V) segment.
@@ -18,7 +18,7 @@
 // HEX3, HEX2, HEX1, HEX0 are wired to out which should show the contents
 // of your register C.
 //
-// When SW[9] is set to 0, SW[7:0] changes the lower 8 bits of the 16-bit 
+// When SW[9] is set to 0, SW[7:0] changes the lower 8 bits of the 16-bit
 // input "in". LEDR[8:0] will show the upper 8-bits of 16-bit input "in".
 //
 // When SW[9] is set to 1, SW[7:0] changes the upper 8 bits of the 16-bit
@@ -32,7 +32,7 @@
 module lab6_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
   input [3:0] KEY;
   input [9:0] SW;
-  output [9:0] LEDR; 
+  output [9:0] LEDR;
   output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
   input CLOCK_50;
 
@@ -41,7 +41,7 @@ module lab6_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
 
   wire Z, N, V;
   cpu U( .clk   (~KEY[0]), // recall from Lab 4 that KEY0 is 1 when NOT pushed
-         .reset (~KEY[1]), 
+         .reset (~KEY[1]),
          .s     (~KEY[2]),
          .load  (~KEY[3]),
          .in    (ir),
@@ -70,11 +70,11 @@ module input_iface(clk, SW, ir, LEDR);
   input [9:0] SW;
   output [15:0] ir;
   output [7:0] LEDR;
-  wire sel_sw = SW[9];  
+  wire sel_sw = SW[9];
   wire [15:0] ir_next = sel_sw ? {SW[7:0],ir[7:0]} : {ir[15:8],SW[7:0]};
   vDFF #(16) REG(clk,ir_next,ir);
-  assign LEDR = sel_sw ? ir[7:0] : ir[15:8];  
-endmodule         
+  assign LEDR = sel_sw ? ir[7:0] : ir[15:8];
+endmodule
 
 module vDFF(clk,D,Q);
   parameter n=1;
@@ -93,16 +93,32 @@ endmodule
 // code will not work with the DE1-SoC because the order of segments used in
 // the book is not the same as on the DE1-SoC (see comments below).
 
+//defining the codes for the HEX display
+
+  `define N0 7'b100_0000 //0
+  `define N1 7'b100_1111 //1
+  `define N2 7'b010_0100 //2
+  `define N3 7'b011_0000 //3
+  `define N4 7'b001_1001 //4
+  `define N5 7'b001_0010 //5
+  `define N6 7'b000_0010 //6
+  `define N7 7'b111_1000 //7
+  `define N8 7'b000_0000 //8
+  `define N9 7'b001_0000 //9
+
 module sseg(in,segs);
   input [3:0] in;
   output [6:0] segs;
 
+  reg [6:0] segs;
+
+
   // NOTE: The code for sseg below is not complete: You can use your code from
-  // Lab4 to fill this in or code from someone else's Lab4.  
+  // Lab4 to fill this in or code from someone else's Lab4.
   //
   // IMPORTANT:  If you *do* use someone else's Lab4 code for the seven
   // segment display you *need* to state the following three things in
-  // a file README.txt that you submit with handin along with this code: 
+  // a file README.txt that you submit with handin along with this code:
   //
   //   1.  First and last name of student providing code
   //   2.  Student number of student providing code
@@ -142,6 +158,20 @@ module sseg(in,segs);
   //            14 | E
   //            15 | F
 
-  assign segs = 7'b0001110;  // this will output "F" 
+  always @ ( * ) begin
+    case (in)
+      7'd0: segs = `N0;
+      7'd1: segs = `N1;
+      7'd2: segs = `N2;
+      7'd3: segs = `N3;
+      7'd4: segs = `N4;
+      7'd5: segs = `N5;
+      7'd6: segs = `N6;
+      7'd7: segs = `N7;
+      7'd8: segs = `N8;
+      7'd9: segs = `N9;
+      default: segs = 7'b0001110;  // this will output "F"
+    endcase
+  end
 
 endmodule
