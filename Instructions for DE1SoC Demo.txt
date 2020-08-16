@@ -1,0 +1,10 @@
+
+
+
+
+1. MOV R0,#3         -> 110_10_000_00000110    ->R0 has 3
+2. MOV R1,R0{01}     -> 110_00_000_001_01_000  ->R1 has 6
+3. ADD R2,R0,R1{10}  -> 101_00_000_010_10_001  ->R2 has 6
+4. CMP R1, R2        -> 101_01_001_000_00_010  ->Zero flag i.e. top of HEX5 should be illuminated
+5. AND R3,R0,R1      -> 101_10_000_011_00_001  ->R3 should have 2
+6. MVN R4,R0         -> 101_11_000_100_00_000  ->R4 has value 16383 

@@ -1,7 +1,6 @@
 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/fsm.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module control
--- Compiling module vDFF
 
 Top level modules:
 	control
@@ -94,18 +93,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	cpu
 
-} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module cpu_tb
-
-Top level modules:
-	cpu_tb
-
 } {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/shifter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module shifter
 
 Top level modules:
 	shifter
+
+} {} {}} C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cpu_tb
+
+Top level modules:
+	cpu_tb
 
 } {} {}}

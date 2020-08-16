@@ -1,10 +1,24 @@
 # Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6.mpf
 # Loading project lab6
+# Compile of alu.v was successful.
+# Compile of datapath.v was successful.
+# Compile of lab6_autograder_check.v was successful.
+# Compile of lab6_top.v was successful.
+# Compile of regfile.v was successful.
+# Compile of shifter.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of instructionDecoder.v was successful.
+# Compile of datapath_tb.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm_tb.v was successful.
+# Compile of cpu.v was successful.
+# Compile of instructionDecoder_tb.v was successful.
 # Compile of cpu_tb.v was successful.
+# 14 compiles, 0 failed with no errors.
 vsim -gui work.cpu_tb
 # vsim -gui work.cpu_tb 
-# Start time: 14:03:29 on Aug 16,2020
+# Start time: 17:25:31 on Aug 16,2020
 # Loading work.cpu_tb
 # Loading work.cpu
 # Loading work.vDFFE
@@ -22,21 +36,11 @@ vsim -gui work.cpu_tb
 # Loading work.shifter
 # Loading work.Mux4b
 # Loading work.Mux2a
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG7/out
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG6/out
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG5/out
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG4/out
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG3/out
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG2/out
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG1/out
-add wave -position end  sim:/cpu_tb/DUT/DP/REGFILE/REG0/out
-add wave -position end sim:/cpu_tb/DUT/FSM/STATE/*
-add wave -position 0  sim:/cpu_tb/DUT/InstructionReg/en
+add wave -position end  sim:/cpu_tb/out
 run -all
 # **PASSED ALL TESTS**
 # ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v(375)
 #    Time: 1275 ps  Iteration: 0  Instance: /cpu_tb
 # Break in Module cpu_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v line 375
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_wave.do
-# End time: 14:07:25 on Aug 16,2020, Elapsed time: 0:03:56
+# End time: 17:28:47 on Aug 16,2020, Elapsed time: 0:03:16
 # Errors: 0, Warnings: 0
