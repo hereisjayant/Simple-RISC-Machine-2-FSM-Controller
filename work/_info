@@ -160,13 +160,13 @@ Z22 !s108 1597523435.000000
 R10
 R11
 vcpu_tb
-!s110 1597523436
+!s110 1597566792
 !i10b 1
-!s100 dGaIH4b4SY<Q`nT5O<JZE2
-I7Mn=6kaKzEkd>TQ@]79=:3
+!s100 32JFCVDVCgEbPF5^07^;41
+I><2jXU8<fj7?`QFRk6CXo1
 R1
 R2
-w1597523427
+w1597523470
 8C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v
 FC:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v
 L0 8
@@ -174,7 +174,7 @@ R6
 r1
 !s85 0
 31
-R22
+!s108 1597566792.000000
 !s107 C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v|
 !i113 1
