@@ -1,5 +1,5 @@
 # Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
-# OpenFile C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6.mpf
+# OpenFile C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab6/lab6.mpf
 # Loading project lab6
 # Compile of alu.v was successful.
 # Compile of datapath.v was successful.
@@ -16,10 +16,10 @@
 # Compile of instructionDecoder_tb.v was successful.
 # Compile of cpu_tb.v was successful.
 # 14 compiles, 0 failed with no errors.
-vsim -gui work.cpu_tb
-# vsim -gui work.cpu_tb 
-# Start time: 17:25:31 on Aug 16,2020
-# Loading work.cpu_tb
+vsim -gui work.lab6_check
+# vsim -gui work.lab6_check 
+# Start time: 15:52:57 on Oct 29,2020
+# Loading work.lab6_check
 # Loading work.cpu
 # Loading work.vDFFE
 # Loading work.InstructionDecoder
@@ -36,11 +36,33 @@ vsim -gui work.cpu_tb
 # Loading work.shifter
 # Loading work.Mux4b
 # Loading work.Mux2a
-add wave -position end  sim:/cpu_tb/out
+vsim -gui work.lab6_check
+# End time: 15:53:41 on Oct 29,2020, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 0
+# vsim -gui work.lab6_check 
+# Start time: 15:53:41 on Oct 29,2020
+# Loading work.lab6_check
+# Loading work.cpu
+# Loading work.vDFFE
+# Loading work.InstructionDecoder
+# Loading work.Mux3H
+# Loading work.control
+# Loading work.vDFF
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.AddSub
+# Loading work.Adder1
+# Loading work.shifter
+# Loading work.Mux4b
+# Loading work.Mux2a
+add wave sim:/lab6_check/*
 run -all
-# **PASSED ALL TESTS**
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v(375)
-#    Time: 1275 ps  Iteration: 0  Instance: /cpu_tb
-# Break in Module cpu_tb at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/cpu_tb.v line 375
-# End time: 17:28:47 on Aug 16,2020, Elapsed time: 0:03:16
+# INTERFACE OK
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v(75)
+#    Time: 195 ps  Iteration: 0  Instance: /lab6_check
+# Break in Module lab6_check at C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/lab6_autograder_check.v line 75
+# End time: 15:57:09 on Oct 29,2020, Elapsed time: 0:03:28
 # Errors: 0, Warnings: 0

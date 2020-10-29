@@ -1,5 +1,5 @@
 Assembler report for lab6_top
-Sun Aug 16 17:03:59 2020
+Thu Oct 29 16:09:59 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/output_files/lab6_top.sof
+  5. Assembler Device Options: C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab6/output_files/lab6_top.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Aug 16 17:03:59 2020 ;
+; Assembler Status      ; Successful - Thu Oct 29 16:09:58 2020 ;
 ; Revision Name         ; lab6_top                              ;
 ; Top-level Entity Name ; lab6_top                              ;
 ; Family                ; Cyclone V                             ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------+
-; Assembler Generated Files                                                   ;
-+-----------------------------------------------------------------------------+
-; File Name                                                                   ;
-+-----------------------------------------------------------------------------+
-; C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/output_files/lab6_top.sof ;
-+-----------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                              ;
++--------------------------------------------------------------------------------------------------------+
+; File Name                                                                                              ;
++--------------------------------------------------------------------------------------------------------+
+; C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab6/output_files/lab6_top.sof ;
++--------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/herei/Desktop/CPEN/CPEN211/programs/lab6/output_files/lab6_top.sof ;
-+----------------+--------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                              ;
-+----------------+--------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00B6CBE7                                                                           ;
-; Checksum       ; 0x00B6CBE7                                                                           ;
-+----------------+--------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab6/output_files/lab6_top.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                         ;
++----------------+-----------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00B6CBE7                                                                                                      ;
+; Checksum       ; 0x00B6CBE7                                                                                                      ;
++----------------+-----------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Aug 16 17:03:29 2020
+    Info: Processing started: Thu Oct 29 16:09:31 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lab6 -c lab6_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Sun Aug 16 17:03:59 2020
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Thu Oct 29 16:09:59 2020
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:24
 
 
